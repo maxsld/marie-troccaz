@@ -65,6 +65,27 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Animations dâ€™apparition
 document.addEventListener("DOMContentLoaded", () => {
+  const burgerButton = document.getElementById("burger-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (burgerButton && mobileMenu) {
+    burgerButton.addEventListener("click", () => {
+      const isOpen = burgerButton.classList.toggle("is-open");
+      mobileMenu.classList.toggle("is-open", isOpen);
+      burgerButton.setAttribute("aria-expanded", String(isOpen));
+      mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        burgerButton.classList.remove("is-open");
+        mobileMenu.classList.remove("is-open");
+        burgerButton.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
+      });
+    });
+  }
+
   const fadeInRightElements = document.querySelectorAll(".animate-fade-in");
   const fadeInOpacityElements = document.querySelectorAll(".animate-fade-opacity");
   const delayBetween = 150;

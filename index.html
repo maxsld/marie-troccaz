@@ -3,49 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marie Troccaz - Hero</title>
+    <title>Marie Troccaz</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
   </head>
   <body>
-    
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand__text">Marie Troccaz</span>
+        </div>
 
-    <div class="container">
+        <nav class="topnav" aria-label="Navigation principale">
+          <a href="#">Accueil</a>
+          <a href="#">Approche</a>
+          <a href="#">Accompagnement</a>
+          <a href="#">Contact</a>
+        </nav>
 
-<header class="navbar">
-  <div class="nav-left">
-    <span class="logo">Marie Troccaz</span>
-    <nav class="nav-center">
-      <a href="#approche">Approche</a>
-      <a href="#about">À propos</a>
-      <a href="#accompagnement">Accompagnement</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+        <div class="topactions">
+          <a href="#" class="btn btn--soft">Mon approche</a>
+          <a href="#" class="btn btn--dark">Prendre rendez-vous</a>
+        </div>
+      </header>
 
-  <div class="nav-right">
-    <a href="#contact" class="button">Prendre un rendez-vous <img src="assets/img/star-white.svg" alt=""></a>
-              <a href="#" target="_blank" aria-label="Instagram" class="instagram-link"><i
-              class="fa-brands fa-instagram"></i></a>
-  </div>
-</header>
+      <main class="hero">
+        <div class="social-proof animate-fade-in">
+          <div class="avatars" aria-label="Avis clients">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Cliente satisfaite" />
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="Client satisfait" />
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Client satisfait" />
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="Cliente satisfaite" />
+          </div>
+          <p class="rating">★ Note moyenne 4,97/5 sur 500+ retours</p>
+        </div>
+        <h1 class="hero__title animate-fade-in">
+          <span class="hero__line-static">Construire une culture d’entreprise</span>
+          <span class="hero__line-dynamic-wrap">
+            <span
+              class="hero__line-dynamic"
+              id="hero-dynamic-text"
+              aria-live="polite"
+              data-phrases='["qui tient dans le temps.","qui aligne vision et actions.","qui renforce la cohésion.","qui libère l’énergie collective.","qui soutient la performance humaine."]'
+            >qui tient dans le temps.</span>
+          </span>
+        </h1>
+        <p class="hero__subtitle animate-fade-in">
+          J’accompagne les dirigeants et équipes de PME à clarifier leur vision,<br />
+          renforcer leur cohésion et retrouver une énergie collective stable et engagée.
+        </p>
 
-    <main class="hero">
-    <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero__actions animate-fade-in">
+          <a href="#" class="btn btn--dark btn--hero">Prendre un rendez-vous</a>
+          <a href="#" class="btn btn--soft btn--hero">Découvrir mon approche</a>
+        </div>
 
+        
+      </main>
 
-    <div class="hero-content">
-<h1 class="animate-fade-in">MARIE TROCCAZ</h1>
-    <p class="animate-fade-in">J’accompagne les dirigeants et équipes de PME à clarifier leur vision, renforcer leur cohésion et retrouver une énergie collective stable et engagée.</p>
-    <div class="hero-buttons">
-      <a class="button animate-fade-in" href="#contact">Prendre un rendez-vous</a>
-      <a class="button2 animate-fade-in" href="#approche">Découvrir mon approche <img src="assets/img/star-black.svg" alt=""></a>
+      <section class="marquee animate-fade-in" aria-label="Galerie clients">
+        <div class="marquee__track">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 1" />
+          <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 2" />
+          <img src="https://images.unsplash.com/photo-1464822759844-d150ad6d1c2c?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 3" />
+          <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 4" />
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 5" />
+          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 6" />
+          <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 7" />
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 8" />
+          <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 9" />
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="Montagne au coucher du soleil 10" />
+
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1464822759844-d150ad6d1c2c?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" />
+        </div>
+      </section>
+
     </div>
-    </div>
-
-</main>
-
-</div>
-
     <script src="assets/js/script.js"></script>
   </body>
 </html>

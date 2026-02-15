@@ -52,7 +52,7 @@
             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Client satisfait" />
             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="Cliente satisfaite" />
           </div>
-          <p class="rating">★ Note moyenne 4,97/5 sur 500+ retours</p>
+          <p class="rating"><span class="rating__star">★</span> Note moyenne 4,97/5 sur 500+ retours</p>
         </div>
         <h1 class="hero__title animate-fade-in">
           <span class="hero__line-static">Construire une culture d’entreprise</span>
@@ -102,7 +102,96 @@
         </div>
       </section>
 
+      <section class="about-story animate-fade-in" id="about" aria-label="À propos de Marie Troccaz">
+        <div class="about-story__content">
+          <div class="about-story__text">
+            <h2>
+              Une culture forte et durable
+            </h2>
+            <p>
+              Je m’appelle Marie. Pendant des années, j’ai observé la même difficulté dans de nombreuses PME :
+              beaucoup d’engagement individuel, mais une dynamique collective qui s’essouffle
+              avec le temps. C’est là que j’interviens : remettre du sens, de la clarté et de
+              la cohérence dans la manière de travailler ensemble.
+            </p>
+            <p>
+              Mon approche relie stratégie humaine et actions concrètes. Nous travaillons sur
+              les habitudes, les modes de décision, la communication et la posture managériale
+              pour installer une culture solide, vivante et durable.
+            </p>
+            <div class="about-story__actions">
+              <a href="#" class="btn btn--dark">Prendre un rendez-vous</a>
+            </div>
+          </div>
+
+          <div class="about-story__visual">
+            <img
+              class="about-story__main-photo"
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+              alt="Marie Troccaz souriante en extérieur"
+            />
+            <img
+              class="about-story__side-photo"
+              src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80"
+              alt="Marie Troccaz pendant un moment de réflexion"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="scroll-writing" aria-label="Message clé">
+        <p class="scroll-writing__text" id="scroll-writing-text" data-fulltext="Tout commence par la qualité du lien."></p>
+      </section>
+
+      <section class="services animate-fade-in" id="services" aria-label="Nos services">
+        <div class="services__inner">
+          <h2>Deux offres pour <span class="services__accent">ancrer</span> votre culture et <span class="services__accent">activer</span> l’énergie collective.</h2>
+          <p class="services__intro">
+            Chaque accompagnement est pensé pour créer de l’alignement concret.
+            L’objectif : une culture claire, vivante et durable au quotidien.
+          </p>
+          <div class="services__grid">
+            <article class="service-card">
+              <div class="service-card__media service-card__media--culture"></div>
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M7 2h10v3h3v15H4V5h3V2zm2 3h6V4H9v1zm2 6h2v2h2v2h-2v2h-2v-2H9v-2h2v-2z"/>
+                </svg>
+              </div>
+              <div class="service-card__body">
+                <h3>Socle de culture & valeurs</h3>
+                <p>
+                  J'accompagne les équipes RH et dirigeants sur la construction d'un socle de
+                  culture d'entreprise solide : clarté sur la vision, alignement des valeurs
+                  et missions partagées.
+                </p>
+                <a href="#" class="btn btn--dark service-card__cta">Prendre rendez-vous</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media service-card__media--energy"></div>
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M12 2a7 7 0 0 1 7 7v2.2c1.2.7 2 2 2 3.5V20h-7v-4h-4v4H3v-5.3c0-1.5.8-2.8 2-3.5V9a7 7 0 0 1 7-7zm0 2a5 5 0 0 0-5 5v1h10V9a5 5 0 0 0-5-5zm-7 12v2h3v-2H5zm11 0v2h3v-2h-3z"/>
+                </svg>
+              </div>
+              <div class="service-card__body">
+                <h3>Énergie collective & leadership</h3>
+                <p>
+                  J’accompagne les équipes et managers pour catalyser leur énergie collective,
+                  développer un leadership humain et favoriser une performance durable
+                  des collaborateurs.
+                </p>
+                <a href="#" class="btn btn--dark service-card__cta">Prendre rendez-vous</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

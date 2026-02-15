@@ -109,4 +109,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleIntersection(fadeInRightElements, "fadeInRightBlur");
   handleIntersection(fadeInOpacityElements, "fadeInOpacity");
+
+  const scrollWritingElement = document.getElementById("scroll-writing-text");
+  const scrollWritingSection = document.querySelector(".scroll-writing");
+  if (scrollWritingElement && window.gsap && window.ScrollTrigger) {
+    const fullText = scrollWritingElement.dataset.fulltext || "";
+    if (!fullText.length) return;
+
+    scrollWritingElement.textContent = "\u00A0";
+
+    gsap.registerPlugin(ScrollTrigger);
+    const typingState = { progress: 0 };
+
+    gsap.to(typingState, {
+      progress: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: scrollWritingSection || scrollWritingElement,
+        start: "top 92%",
+        end: "+=1200",
+        scrub: true,
+        pin: true,
+        pinSpacing: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      },
+      onUpdate: () => {
+        const lettersCount = Math.round(typingState.progress * fullText.length);
+        scrollWritingElement.textContent = lettersCount > 0 ? fullText.slice(0, lettersCount) : "\u00A0";
+      },
+      onComplete: () => {
+        scrollWritingElement.textContent = fullText;
+      },
+      onReverseComplete: () => {
+        scrollWritingElement.textContent = "\u00A0";
+      }
+    });
+
+    ScrollTrigger.refresh();
+  }
+
 });

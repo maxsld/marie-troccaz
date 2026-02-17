@@ -473,7 +473,10 @@ border-radius: 10px;
   }
 
   .about-story__main-photo {
+    width: 100%;
+    height: 450px;
     transform: none;
+    box-shadow: none;
   }
 
   .about-story__side-photo {
@@ -732,6 +735,8 @@ border-radius: 10px;
 
   .service-panel--reverse .service-panel__media img {
     transform: none;
+    height: 420px;
+    margin-bottom: 2rem;
   }
 }
 

@@ -922,6 +922,130 @@ display: table;
 
 }
 
+.reviews-section {
+  padding: 6rem 0;
+}
+
+.reviews-section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-section h2 {
+  margin: 0 auto 26px;
+  max-width: 24ch;
+  text-align: center;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(32px, 4.4vw, 60px);
+  line-height: 0.96;
+  font-style: italic;
+  font-weight: 400;
+  color: #2b2522;
+}
+
+.reviews-carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.reviews-carousel::before,
+.reviews-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(28px, 6vw, 92px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.reviews-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 0%, rgba(240, 236, 230, 0) 100%);
+}
+
+.reviews-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, rgba(240, 236, 230, 0) 100%);
+}
+
+.reviews-carousel__track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: reviews-scroll 42s linear infinite;
+}
+
+.review-card {
+  width: min(76vw, 360px);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(37, 33, 28, 0.1);
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-card__text {
+  margin: 0;
+  color: #3f382f;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.review-card__footer {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.review-card__author {
+  margin: 0;
+}
+
+.review-card__name {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-size: 17px;
+  line-height: 1;
+  font-style: italic;
+  color: #2f2821;
+  font-weight: 400;
+}
+
+.review-card__role {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #5b5348;
+}
+
+@keyframes reviews-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-carousel__track {
+    animation: none;
+  }
+}
+
 .faq-section {
   padding: 64px 20px 90px;
 }

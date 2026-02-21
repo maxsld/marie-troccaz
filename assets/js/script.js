@@ -80,10 +80,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const clonedSlides = Array.from(marqueeTrack.querySelectorAll('img[aria-hidden="true"]'));
 
     if (visibleSlides.length > 0) {
-      const allCarouselImages = Array.from({ length: 17 }, (_, index) => {
-        const number = String(index + 1).padStart(2, "0");
-        return `assets/img/carousel-${number}.jpeg`;
-      });
+      const allCarouselImages = [
+        "assets/img/carousel-01.jpeg",
+        "assets/img/carousel-02.jpeg",
+        "assets/img/carousel-03.jpeg",
+        "assets/img/carousel-04.jpeg",
+        "assets/img/carousel-06.jpeg",
+        "assets/img/carousel-07.jpeg",
+        "assets/img/carousel-08.jpeg",
+        "assets/img/carousel-09.jpeg",
+        "assets/img/carousel-10.jpeg",
+        "assets/img/carousel-11.jpeg",
+        "assets/img/carousel-12.jpeg",
+        "assets/img/carousel-13.jpeg",
+        "assets/img/carousel-14.jpeg",
+        "assets/img/carousel-15.jpeg",
+        "assets/img/carousel-16.jpeg",
+        "assets/img/carousel-17.jpeg",
+        "assets/img/carousel-18.jpeg",
+        "assets/img/carousel-19.jpeg",
+        "assets/img/carousel-20.jpeg",
+        "assets/img/carousel-21.jpeg",
+        "assets/img/carousel-22.jpeg",
+        "assets/img/carousel-23.jpeg",
+        "assets/img/carousel-24.jpeg"
+      ];
 
       for (let i = allCarouselImages.length - 1; i > 0; i -= 1) {
         const j = Math.floor(Math.random() * (i + 1));

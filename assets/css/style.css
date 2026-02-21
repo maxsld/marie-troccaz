@@ -721,7 +721,9 @@ border-radius: 10px;
 
 .service-panel__content {
   flex: 1;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: clamp(24px, 3.6vw, 46px);
 }
 
@@ -764,6 +766,7 @@ border-radius: 10px;
 
 .service-panel .btn {
   margin-top: 16px;
+  width: fit-content;
 }
 
 @media (max-width: 980px) {

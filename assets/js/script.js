@@ -91,19 +91,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (visibleSlides.length > 0) {
       const allCarouselImages = [
         "assets/img/carousel-01.webp",
-        "assets/img/carousel-02.webp",
-        "assets/img/carousel-03.webp",
-        "assets/img/carousel-04.webp",
         "assets/img/carousel-06.webp",
         "assets/img/carousel-07.webp",
         "assets/img/carousel-08.webp",
         "assets/img/carousel-09.webp",
         "assets/img/carousel-10.webp",
-        "assets/img/carousel-11.webp",
         "assets/img/carousel-12.webp",
         "assets/img/carousel-13.webp",
         "assets/img/carousel-14.webp",
         "assets/img/carousel-15.webp",
+        "assets/img/carousel-24.webp",
+        "assets/img/carousel-25.jpeg",
+        "assets/img/carousel-26.jpeg",
+        "assets/img/carousel-27.jpeg",
+        "assets/img/carousel-28.jpeg",
+        "assets/img/carousel-29.jpeg",
+        "assets/img/carousel-30.jpeg",
+        "assets/img/carousel-31.jpeg",
         "assets/img/carousel-16.webp",
         "assets/img/carousel-17.webp",
         "assets/img/carousel-18.webp",
@@ -112,14 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "assets/img/carousel-21.webp",
         "assets/img/carousel-22.webp",
         "assets/img/carousel-23.webp",
-        "assets/img/carousel-24.webp",
-        "assets/img/carousel-25.jpeg",
-        "assets/img/carousel-26.jpeg",
-        "assets/img/carousel-27.jpeg",
-        "assets/img/carousel-28.jpeg",
-        "assets/img/carousel-29.jpeg",
-        "assets/img/carousel-30.jpeg",
-        "assets/img/carousel-31.jpeg"
       ];
 
       for (let i = allCarouselImages.length - 1; i > 0; i -= 1) {

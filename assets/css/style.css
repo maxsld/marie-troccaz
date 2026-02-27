@@ -86,6 +86,32 @@ body {
   gap: 12px;
 }
 
+.topactions__linkedin {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.topactions__linkedin img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.topactions__linkedin::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
 .burger {
   display: none;
   width: 42px;
@@ -428,7 +454,7 @@ body {
   display: flex;
   width: max-content;
   gap: 18px;
-  animation: slide 52s linear infinite;
+  animation: slide 80s linear infinite;
 }
 
 .marquee__track img {
@@ -670,15 +696,30 @@ body {
 }
 
 .quote-focus {
-  padding: 28px 20px 40px;
+  padding: 6rem 20px;
   text-align: center;
 }
 
 .quote-focus__card {
+  position: relative;
   max-width: 1080px;
   margin: 0 auto;
   padding: clamp(22px, 4vw, 38px);
   border-radius: 16px;
+  isolation: isolate;
+}
+
+.quote-focus__card::before {
+  content: "“";
+  position: absolute;
+  left: clamp(10px, 2vw, 22px);
+  top: clamp(-26px, -2vw, -12px);
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(120px, 18vw, 320px);
+  line-height: 0.8;
+  color: rgba(127, 127, 245, 0.24);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .quote-focus__text {
@@ -704,7 +745,7 @@ body {
 
 @media (max-width: 640px) {
   .quote-focus {
-    padding: 20px 16px 26px;
+    padding: 6rem 16px;
   }
 
   .quote-focus__card {

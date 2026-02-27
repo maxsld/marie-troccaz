@@ -74,6 +74,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Animations d'apparition
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("img").forEach((img) => {
+    if (img.classList.contains("brand__logo") || img.closest(".hero")) {
+      if (!img.hasAttribute("decoding")) img.decoding = "async";
+      return;
+    }
+    if (!img.hasAttribute("loading")) img.loading = "lazy";
+    if (!img.hasAttribute("decoding")) img.decoding = "async";
+  });
+
   const marqueeTrack = document.querySelector(".marquee__track");
   if (marqueeTrack) {
     const visibleSlides = Array.from(marqueeTrack.querySelectorAll('img:not([aria-hidden="true"])'));
@@ -81,29 +90,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (visibleSlides.length > 0) {
       const allCarouselImages = [
-        "assets/img/carousel-01.jpeg",
-        "assets/img/carousel-02.jpeg",
-        "assets/img/carousel-03.jpeg",
-        "assets/img/carousel-04.jpeg",
-        "assets/img/carousel-06.jpeg",
-        "assets/img/carousel-07.jpeg",
-        "assets/img/carousel-08.jpeg",
-        "assets/img/carousel-09.jpeg",
-        "assets/img/carousel-10.jpeg",
-        "assets/img/carousel-11.jpeg",
-        "assets/img/carousel-12.jpeg",
-        "assets/img/carousel-13.jpeg",
-        "assets/img/carousel-14.jpeg",
-        "assets/img/carousel-15.jpeg",
-        "assets/img/carousel-16.jpeg",
-        "assets/img/carousel-17.jpeg",
-        "assets/img/carousel-18.jpeg",
-        "assets/img/carousel-19.jpeg",
-        "assets/img/carousel-20.jpeg",
-        "assets/img/carousel-21.jpeg",
-        "assets/img/carousel-22.jpeg",
-        "assets/img/carousel-23.jpeg",
-        "assets/img/carousel-24.jpeg"
+        "assets/img/carousel-01.webp",
+        "assets/img/carousel-02.webp",
+        "assets/img/carousel-03.webp",
+        "assets/img/carousel-04.webp",
+        "assets/img/carousel-06.webp",
+        "assets/img/carousel-07.webp",
+        "assets/img/carousel-08.webp",
+        "assets/img/carousel-09.webp",
+        "assets/img/carousel-10.webp",
+        "assets/img/carousel-11.webp",
+        "assets/img/carousel-12.webp",
+        "assets/img/carousel-13.webp",
+        "assets/img/carousel-14.webp",
+        "assets/img/carousel-15.webp",
+        "assets/img/carousel-16.webp",
+        "assets/img/carousel-17.webp",
+        "assets/img/carousel-18.webp",
+        "assets/img/carousel-19.webp",
+        "assets/img/carousel-20.webp",
+        "assets/img/carousel-21.webp",
+        "assets/img/carousel-22.webp",
+        "assets/img/carousel-23.webp",
+        "assets/img/carousel-24.webp",
+        "assets/img/carousel-25.jpeg",
+        "assets/img/carousel-26.jpeg",
+        "assets/img/carousel-27.jpeg",
+        "assets/img/carousel-28.jpeg",
+        "assets/img/carousel-29.jpeg",
+        "assets/img/carousel-30.jpeg",
+        "assets/img/carousel-31.jpeg"
       ];
 
       for (let i = allCarouselImages.length - 1; i > 0; i -= 1) {
@@ -146,6 +162,43 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  const aboutToggleButton = document.getElementById("about-toggle-btn");
+  const aboutMoreText = document.getElementById("about-more-text");
+
+  if (aboutToggleButton && aboutMoreText) {
+    aboutMoreText.style.maxHeight = "0px";
+
+    aboutToggleButton.addEventListener("click", () => {
+      const isExpanded = aboutToggleButton.getAttribute("aria-expanded") === "true";
+      const nextExpanded = !isExpanded;
+
+      aboutMoreText.classList.toggle("is-open", nextExpanded);
+      aboutMoreText.style.maxHeight = nextExpanded ? `${aboutMoreText.scrollHeight}px` : "0px";
+      aboutToggleButton.setAttribute("aria-expanded", String(nextExpanded));
+      aboutMoreText.setAttribute("aria-hidden", String(!nextExpanded));
+      aboutToggleButton.textContent = nextExpanded ? "Voir moins" : "Voir plus";
+    });
+  }
+
+  document.querySelectorAll(".review-card__toggle").forEach((toggleButton) => {
+    const reviewCard = toggleButton.closest(".review-card");
+    if (!reviewCard) return;
+
+    const excerpt = reviewCard.querySelector(".review-card__excerpt");
+    const fullText = reviewCard.querySelector(".review-card__full");
+    if (!excerpt || !fullText) return;
+
+    toggleButton.addEventListener("click", () => {
+      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+      const nextExpanded = !isExpanded;
+
+      excerpt.hidden = nextExpanded;
+      fullText.hidden = !nextExpanded;
+      toggleButton.setAttribute("aria-expanded", String(nextExpanded));
+      toggleButton.textContent = nextExpanded ? "Voir moins" : "Voir plus";
+    });
+  });
 
   const fadeInRightElements = document.querySelectorAll(".animate-fade-in");
   const fadeInOpacityElements = document.querySelectorAll(".animate-fade-opacity");

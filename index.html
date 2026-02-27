@@ -87,34 +87,50 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Quel est votre processus d’accompagnement ?",
+            "name": "Quel est le processus d’accompagnement en management touristique ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "J’adopte une approche orientée résultats qui combine clarté stratégique et intelligence relationnelle. Nous commençons par un diagnostic, puis nous construisons des actions concrètes pour renforcer la cohésion, la culture managériale et la performance durable."
+              "text": "Mon accompagnement en management touristique suit 3 étapes : diagnostic de vos enjeux, objectifs SMART, puis plan d’actions opérationnel. L’objectif est d’améliorer le leadership, la cohésion d’équipe et la performance durable de votre établissement touristique."
             }
           },
           {
             "@type": "Question",
-            "name": "Combien de temps dure une mission ?",
+            "name": "Combien de temps dure un accompagnement pour un hébergement touristique ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Selon vos enjeux : de quelques sessions ciblées à un accompagnement sur plusieurs mois."
+              "text": "Selon vos objectifs, l’accompagnement peut aller de sessions ciblées à un programme complet sur plusieurs mois. Le format est adapté à la saisonnalité, au rythme de votre équipe et aux priorités de votre structure touristique."
             }
           },
           {
             "@type": "Question",
-            "name": "Intervenez-vous aussi avec les managers ?",
+            "name": "Intervenez-vous avec les dirigeants, managers et équipes ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Oui, c’est central : posture managériale, communication d’équipe et rituels de pilotage."
+              "text": "Oui. J’accompagne les dirigeants, managers et équipes sur la posture managériale, la communication d’équipe et les rituels de pilotage. Cette approche favorise l’engagement, réduit les tensions et améliore l’expérience client."
             }
           },
           {
             "@type": "Question",
-            "name": "Comment démarrer ?",
+            "name": "Comment savoir si cet accompagnement en leadership est fait pour moi ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "On démarre avec un échange de cadrage pour définir vos objectifs et la bonne trajectoire."
+              "text": "Cet accompagnement est fait pour vous si vous souhaitez structurer votre management, stabiliser votre équipe et renforcer la qualité de l’accueil client. Il convient aux responsables d’hôtels, campings, maisons d’hôtes, résidences et établissements indépendants."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qu’est-ce qu’un coach professionnel en management ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un coach professionnel en management vous aide à prendre du recul, clarifier vos décisions et passer à l’action. Il facilite la montée en compétence managériale, la qualité relationnelle et l’alignement entre vision, équipe et résultats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelles sont vos certifications ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Je suis certifiée en coaching professionnel BECOACH depuis 2025 et diplômée de l’Institut Français Supérieur des Métiers de Sophrologie de Clermont Ferrand depuis 2018. J’accompagne les établissements touristiques, notamment en Drôme."
             }
           }
         ]
@@ -131,15 +147,15 @@
         </div>
 
         <nav class="topnav" aria-label="Navigation principale">
-          <a href="#">Accueil</a>
-          <a href="#">Approche</a>
-          <a href="#">Accompagnement</a>
-          <a href="#">Contact</a>
+          <a href="#accueil">Accueil</a>
+          <a href="#about">A propos</a>
+          <a href="#services">Accompagnement</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div class="topactions">
-          <a href="#" class="btn btn--soft">Mon approche</a>
-          <a href="#" class="btn btn--dark">Prendre rendez-vous</a>
+          <a href="#services" class="btn btn--soft">Découvrir mon approche</a>
+          <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
         </div>
 
         <button class="burger" id="burger-button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -149,18 +165,18 @@
       </header>
       <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <nav class="mobile-menu__nav" aria-label="Menu mobile">
-          <a href="#">Accueil</a>
-          <a href="#">Approche</a>
-          <a href="#">Accompagnement</a>
-          <a href="#">Contact</a>
+          <a href="#accueil">Accueil</a>
+          <a href="#about">A propos</a>
+          <a href="#services">Accompagnement</a>
+          <a href="#contact">Contact</a>
         </nav>
         <div class="mobile-menu__actions">
-          <a href="#" class="btn btn--soft">Mon approche</a>
-          <a href="#" class="btn btn--dark">Prendre rendez-vous</a>
+          <a href="#services" class="btn btn--soft">Découvrir mon approche</a>
+          <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
         </div>
       </div>
 
-      <main class="hero">
+      <main class="hero" id="accueil">
         <div class="social-proof animate-fade-in">
           <div class="avatars" aria-label="Avis clients">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Cliente satisfaite" />
@@ -171,24 +187,24 @@
           <p class="rating"><span class="rating__star">★</span> Note moyenne 4,97/5 sur 500+ retours</p>
         </div>
         <h1 class="hero__title animate-fade-in">
-          <span class="hero__line-static">Construire une culture d’équipe</span>
+          <span class="hero__line-static">Construisez une culture d’équipe</span>
           <span class="hero__line-dynamic-wrap">
             <span
               class="hero__line-dynamic"
               id="hero-dynamic-text"
               aria-live="polite"
-              data-phrases='["adaptée aux enjeux du tourisme","qui tient sur toute la saison","qui aligne accueil, management et terrain","qui renforce la cohésion des équipes","qui soutient une performance durable"]'
-            >qui tient dans le temps.</span>
+              data-phrases='["adaptée à vos enjeux touristiques","alignée avec votre leadership","alignée avec votre vision et vos valeurs","qui révèle les talents de vos équipes","qui garantit une expérience client haut de gamme","qui sécurise la performance sur la saison"]'
+            >adaptée à vos enjeux.</span>
           </span>
         </h1>
         <p class="hero__subtitle animate-fade-in">
-          J’accompagne les structures touristiques de la Drôme à clarifier leur vision,<br />
-          renforcer leur cohésion et stabiliser l’énergie collective, en saison comme hors saison.
+          J’accompagne les dirigeant(e)s d’hébergements touristiques à développer une posture managériale révélatrice de talents,<br />
+          pour créer, avec leurs équipes, des expériences clients vivantes et mémorables.
         </p>
 
         <div class="hero__actions animate-fade-in">
-          <a href="#" class="btn btn--dark btn--hero">Prendre un rendez-vous</a>
-          <a href="#" class="btn btn--soft btn--hero">Découvrir mon approche</a>
+          <a href="#contact" class="btn btn--dark btn--hero">Prendre rendez-vous</a>
+          <a href="#services" class="btn btn--soft btn--hero">Découvrir mon approche</a>
         </div>
 
         
@@ -196,37 +212,51 @@
 
       <section class="marquee animate-fade-in" aria-label="Galerie clients">
         <div class="marquee__track">
-          <img src="assets/img/carousel-01.jpeg" alt="Photo accompagnement 1" />
-          <img src="assets/img/carousel-02.jpeg" alt="Photo accompagnement 2" />
-          <img src="assets/img/carousel-04.jpeg" alt="Photo accompagnement 4" />
-          <img src="assets/img/carousel-10.jpeg" alt="Photo accompagnement 5" />
-          <img src="assets/img/carousel-06.jpeg" alt="Photo accompagnement 6" />
-          <img src="assets/img/carousel-07.jpeg" alt="Photo accompagnement 7" />
-          <img src="assets/img/carousel-08.jpeg" alt="Photo accompagnement 8" />
-          <img src="assets/img/carousel-09.jpeg" alt="Photo accompagnement 9" />
-          <img src="assets/img/carousel-18.jpeg" alt="Photo accompagnement 10" />
-          <img src="assets/img/carousel-19.jpeg" alt="Photo accompagnement 11" />
-          <img src="assets/img/carousel-20.jpeg" alt="Photo accompagnement 12" />
-          <img src="assets/img/carousel-21.jpeg" alt="Photo accompagnement 13" />
-          <img src="assets/img/carousel-22.jpeg" alt="Photo accompagnement 14" />
-          <img src="assets/img/carousel-23.jpeg" alt="Photo accompagnement 15" />
-          <img src="assets/img/carousel-24.jpeg" alt="Photo accompagnement 16" />
+          <img src="assets/img/carousel-01.webp" alt="Photo accompagnement 1" />
+          <img src="assets/img/carousel-02.webp" alt="Photo accompagnement 2" />
+          <img src="assets/img/carousel-04.webp" alt="Photo accompagnement 4" />
+          <img src="assets/img/carousel-10.webp" alt="Photo accompagnement 5" />
+          <img src="assets/img/carousel-06.webp" alt="Photo accompagnement 6" />
+          <img src="assets/img/carousel-07.webp" alt="Photo accompagnement 7" />
+          <img src="assets/img/carousel-08.webp" alt="Photo accompagnement 8" />
+          <img src="assets/img/carousel-09.webp" alt="Photo accompagnement 9" />
+          <img src="assets/img/carousel-18.webp" alt="Photo accompagnement 10" />
+          <img src="assets/img/carousel-19.webp" alt="Photo accompagnement 11" />
+          <img src="assets/img/carousel-20.webp" alt="Photo accompagnement 12" />
+          <img src="assets/img/carousel-21.webp" alt="Photo accompagnement 13" />
+          <img src="assets/img/carousel-22.webp" alt="Photo accompagnement 14" />
+          <img src="assets/img/carousel-23.webp" alt="Photo accompagnement 15" />
+          <img src="assets/img/carousel-24.webp" alt="Photo accompagnement 16" />
+          <img src="assets/img/carousel-25.jpeg" alt="Photo accompagnement 17" />
+          <img src="assets/img/carousel-26.jpeg" alt="Photo accompagnement 18" />
+          <img src="assets/img/carousel-27.jpeg" alt="Photo accompagnement 19" />
+          <img src="assets/img/carousel-28.jpeg" alt="Photo accompagnement 20" />
+          <img src="assets/img/carousel-29.jpeg" alt="Photo accompagnement 21" />
+          <img src="assets/img/carousel-30.jpeg" alt="Photo accompagnement 22" />
+          <img src="assets/img/carousel-31.jpeg" alt="Photo accompagnement 23" />
 
-          <img src="assets/img/carousel-01.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-02.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-04.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-10.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-06.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-07.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-08.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-09.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-18.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-19.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-20.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-21.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-22.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-23.jpeg" alt="" aria-hidden="true" />
-          <img src="assets/img/carousel-24.jpeg" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-01.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-02.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-04.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-10.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-06.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-07.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-08.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-09.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-18.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-19.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-20.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-21.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-22.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-23.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-24.webp" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-25.jpeg" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-26.jpeg" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-27.jpeg" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-28.jpeg" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-29.jpeg" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-30.jpeg" alt="" aria-hidden="true" />
+          <img src="assets/img/carousel-31.jpeg" alt="" aria-hidden="true" />
         </div>
       </section>
 
@@ -234,34 +264,42 @@
         <div class="about-story__content">
           <div class="about-story__text">
             <div class="tag">A propos</div>
-            <h2>
-              Une culture <span class="word-violet">forte</span> et durable
-            </h2>
+            <h2>Qui suis je ?</h2>
             <p>
-              Je m’appelle Marie. Pendant des années, j’ai observé la même difficulté dans de nombreuses
-              structures touristiques : beaucoup d’implication individuelle, mais une dynamique collective qui
-              se fragilise au fil des saisons. C’est là que j’interviens : remettre du sens, de la clarté et de
-              la cohérence dans la façon de travailler ensemble.
+              Après dix années consacrées au tourisme et à la gestion d'hébergement dans la Drôme, j'ai choisi une nouvelle trajectoire professionnelle,
+              fondée sur l'alliance entre efficacité et relation humaine.
             </p>
             <p>
-              Mon approche relie stratégie humaine et actions concrètes. Nous travaillons sur les habitudes,
-              l’organisation, la communication et la posture managériale pour créer une culture d’équipe solide,
-              vivante et durable, au service de l’expérience client.
+              Je m'appelle Marie, je suis coach professionnelle, et j'accompagne les dirigeants de lieux d'accueil, hôtels, campings,
+              maisons d'hôtes, résidences et établissements indépendants, à développer une posture managériale révélatrice de talents...
             </p>
+            <div class="about-story__more" id="about-more-text" aria-hidden="true">
+              <p>
+                Un hébergement ne repose pas seulement sur un beau lieu. Il repose sur une équipe. Et une équipe s'épanouit selon la manière dont elle est guidée.
+                Ma force est une écoute active profonde, une lecture fine des dynamiques humaines et un cadre de confiance pour poser des décisions claires et alignées.
+              </p>
+              <p>
+                Je ne propose pas de recettes toutes faites. Je vous aide à révéler votre propre style de leadership pour transformer votre management
+                en levier de performance durable. Des talents révélés créent naturellement des expériences clients vivantes et mémorables.
+              </p>
+            </div>
+            <button class="about-story__toggle" id="about-toggle-btn" type="button" aria-expanded="false" aria-controls="about-more-text">
+              Voir plus
+            </button>
             <div class="about-story__actions">
-              <a href="#" class="btn btn--dark">Prendre un rendez-vous</a>
+              <a href="#contact" class="btn btn--dark">Prendre un rendez-vous</a>
             </div>
           </div>
 
           <div class="about-story__visual">
             <img
               class="about-story__main-photo"
-              src="assets/img/about2.jpeg"
+              src="assets/img/about2.webp"
               alt="Marie Troccaz souriante en extérieur"
             />
             <img
               class="about-story__side-photo"
-              src="assets/img/about1.jpeg"
+              src="assets/img/about1.webp"
               alt="Marie Troccaz pendant un moment de réflexion"
             />
           </div>
@@ -272,15 +310,15 @@
         <div class="parcours-band__inner">
           <article class="parcours-item">
             <p class="parcours-item__num">10 ans</p>
-            <p class="parcours-item__text">d’expérience en management touristique, avec une conviction : la performance repose sur l’énergie des équipes.</p>
+            <p class="parcours-item__text">J'ai appris en management touristique qu'un leadership centré sur l'humain transforme l'engagement des équipes en expériences clients mémorables et authentiques.</p>
           </article>
           <article class="parcours-item">
             <p class="parcours-item__num">2 formations</p>
-            <p class="parcours-item__text">en coaching et sophrologie, pour allier méthode et bien-être dans mes accompagnements.</p>
+            <p class="parcours-item__text">En coaching et en sophrologie, elles me permettent de vous accompagner sur votre posture managériale et votre capacité à rester aligné(e) et serein(e) dans les moments de tension.</p>
           </article>
           <article class="parcours-item">
             <p class="parcours-item__num">1 passion</p>
-            <p class="parcours-item__text">révéler la force distinctive de chaque structure touristique et la transformer en résultats concrets.</p>
+            <p class="parcours-item__text">Faire émerger ce qui rend chaque lieu unique, en révélant les talents de celles et ceux qui le font vivre au quotidien.</p>
           </article>
         </div>
       </section>
@@ -293,52 +331,71 @@
 
       <section class="services animate-fade-in" id="services" aria-label="Mes accompagnements">
         <div class="services__inner">
-          <p class="services__tag">Mes accompagnements</p>
+          <p class="services__tag">Mes accompagnements / Méthode</p>
+          <h2>Le Jardin des Talents, cultiver l’excellence hôtelière</h2>
+          <p class="services__intro">
+            Un accompagnement en 3 niveaux, vendables séparément selon vos besoins, ou en parcours complet pour un impact maximal.
+          </p>
           <div class="services__stack">
             <article class="service-panel">
               <div class="service-panel__media">
-                <img src="assets/img/carousel-17.jpeg" alt="Dirigeants en atelier stratégique" />
+                <img src="assets/img/carousel-17.webp" alt="Dirigeants en atelier stratégique" />
               </div>
               <div class="service-panel__content">
-                <p class="service-panel__audience">Pour directions de structures touristiques</p>
-                <h3>Une culture d’accueil claire pour une structure performante</h3>
+                <p class="service-panel__audience">Leadership et posture managériale</p>
+                <h3>Votre établissement reflète votre posture de dirigeant</h3>
                 <p class="service-panel__text">
-                  J’accompagne les directions de structures touristiques à construire une culture claire, alignée et opérationnelle.
-                  Nous travaillons l’alignement entre promesse client, organisation interne et réalité terrain pour fluidifier
-                  les décisions. Nous installons des rituels managériaux qui renforcent l’engagement, la qualité de service
-                  et la fidélisation des équipes. Résultat : une structure où chaque décision et chaque action vont dans
-                  le même sens, au bénéfice de l’expérience client.
+                  Je vous aide à développer un leadership authentique et inspirant, capable d’incarner votre vision et de donner du sens à l’action quotidienne.
+                  Nous clarifions la culture de votre établissement, vision, valeurs, rituels, codes, et alignons votre leadership avec vos équipes.
+                  Puis nous mettons en place des stratégies concrètes pour gérer le stress, l’énergie et le temps, afin de faire de votre leadership un moteur d’engagement.
                 </p>
-                <a href="#" class="btn btn--dark">Prendre rendez-vous</a>
+                <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
               </div>
             </article>
 
             <article class="service-panel service-panel--reverse">
               <div class="service-panel__media">
-                <img src="assets/img/carousel-16.jpeg" alt="Équipe en collaboration autour d’un projet" />
+                <img src="assets/img/carousel-16.webp" alt="Équipe en collaboration autour d’un projet" />
               </div>
               <div class="service-panel__content">
-                <p class="service-panel__audience">Pour managers et équipes terrain</p>
-                <h3>Des équipes saison après saison, unies et engagées</h3>
+                <p class="service-panel__audience">Recrutement et révélation des talents</p>
+                <h3>Les bonnes personnes aux bons endroits</h3>
                 <p class="service-panel__text">
-                  J’accompagne les managers et les équipes terrain pour canaliser l’énergie collective et la transformer
-                  en performance concrète. En renforçant la cohésion, la communication et la coordination, les tensions
-                  diminuent et la qualité de service progresse durablement. Résultat : des équipes plus sereines,
-                  plus efficaces et plus fidèles, même dans les périodes de forte activité.
+                  Le succès d’un établissement repose sur les bonnes personnes aux bons endroits.
+                  Je vous accompagne pour recruter des collaborateurs en harmonie avec l’ADN de votre établissement, identifier leurs talents et les placer dans des rôles où ils s’épanouissent.
+                  L’objectif est de constituer une équipe capable de faire vivre une expérience client authentique et mémorable.
                 </p>
-                <a href="#" class="btn btn--dark">Prendre rendez-vous</a>
+                <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
+              </div>
+            </article>
+
+            <article class="service-panel">
+              <div class="service-panel__media">
+                <img src="assets/img/carousel-15.webp" alt="Atelier d’équipe et cohésion collective" />
+              </div>
+              <div class="service-panel__content">
+                <p class="service-panel__audience">Cohésion d’équipe et engagement</p>
+                <h3>Une équipe soudée transforme l’énergie de votre établissement</h3>
+                <p class="service-panel__text">
+                  Nous travaillons sur la compréhension des motivations et forces de chaque collaborateur et sur la manière dont elles s’articulent avec votre leadership.
+                  À travers des ateliers concrets et participatifs, nous renforçons l’engagement, la vision commune et la cohésion, pour que chacun contribue au succès collectif.
+                </p>
+                <p class="service-panel__text">
+                  L’objectif est de transformer votre management en levier stratégique, pour révéler le potentiel de vos équipes et créer des expériences clients haut de gamme et vivantes.
+                </p>
+                <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="method-section animate-fade-in" id="methode" aria-label="Valeurs et méthode">
+      <section class="method-section animate-fade-in" id="methode" aria-label="Stratégie et résultats">
         <div class="method-section__inner">
-          <p class="method-section__tag">Valeurs & méthode</p>
-          <h2>Une approche structurée, concrète et progressive</h2>
+          <p class="method-section__tag">Des résultats mesurables et durables</p>
+          <h2>Une approche stratégique, structurée et progressive</h2>
           <p class="method-section__intro">
-            Une méthode en 4 étapes pour transformer la dynamique d’équipe des structures touristiques en leviers visibles de cohésion et de performance.
+            En 4 mois, vous transformez votre posture managériale, stabilisez votre équipe et améliorez durablement l’expérience client.
           </p>
 
           <div class="method-timeline" id="method-timeline">
@@ -348,37 +405,49 @@
 
             <article class="method-step">
               <p class="method-step__num">01</p>
-              <h3>Diagnostic de terrain</h3>
-              <p>Nous posons un diagnostic précis des pratiques d’accueil, des dynamiques d’équipe et des points de friction opérationnels.</p>
-              <img class="method-step__media" src="assets/img/method1.jpeg" alt="Analyse de la culture en atelier" />
+              <h3>Résultats pour le dirigeant</h3>
+              <p>Un leadership plus juste, clair et serein. Moins de fatigue, plus de confiance et de fluidité dans vos décisions.</p><br>
+              <p><strong>Résultat clé :</strong> un dirigeant disponible, solide et capable de faire briller son équipe et son établissement.</p>
+              <img class="method-step__media" src="assets/img/method1.webp" alt="Analyse de la culture en atelier" />
             </article>
 
             <article class="method-step">
               <p class="method-step__num">02</p>
-              <h3>Clarification des repères communs</h3>
-              <p>Nous définissons des repères clairs pour aligner posture, communication, décisions et qualité de service au quotidien.</p>
-              <img class="method-step__media" src="assets/img/carousel-22.jpeg" alt="Clarification des valeurs en équipe" />
+              <h3>Résultats pour l’équipe</h3>
+              <p>Des équipes plus engagées, autonomes et impliquées. Une meilleure cohésion, une communication fluide et moins de tensions.</p><br>
+              <p><strong>Résultat clé :</strong> une équipe stable, engagée et fiable, prête à faire briller votre établissement.</p>
+              <img class="method-step__media" src="assets/img/carousel-22.webp" alt="Clarification des valeurs en équipe" />
             </article>
 
             <article class="method-step">
               <p class="method-step__num">03</p>
-              <h3>Travail avec managers et équipes</h3>
-              <p>Nous canalisons l’énergie collective grâce à un travail concret sur la posture managériale, la communication et la collaboration.</p>
-              <img class="method-step__media" src="assets/img/method3.jpeg" alt="Travail collaboratif managers et équipes" />
+              <h3>Résultats pour l’établissement</h3>
+              <p>Une culture d’entreprise claire et incarnée. Des processus plus fluides, une structure stable, et un recrutement aligné et durable.</p><br>
+              <p><strong>Résultat clé :</strong> une organisation solide et pérenne, capable de soutenir la performance sur le long terme.</p>
+              <img class="method-step__media" src="assets/img/method3.webp" alt="Travail collaboratif managers et équipes" />
             </article>
 
             <article class="method-step">
               <p class="method-step__num">04</p>
-              <h3>Suivi et ancrage durable</h3>
-              <p>Nous mesurons les évolutions et ajustons les actions pour ancrer les progrès dans la durée, de saison en saison.</p>
-              <img class="method-step__media" src="assets/img/carousel-15.jpeg" alt="Suivi des résultats et impact durable" />
+              <h3>Résultats pour l’expérience client</h3>
+              <p>Une expérience authentique et humaine, un accueil renforcé, des moments vivants et mémorables, plus de satisfaction et de fidélisation.</p><br>
+              <p><strong>Résultat clé :</strong> une expérience client profondément vivante, différenciante et mémorable, qui renforce votre réputation.</p>
+              <img class="method-step__media" src="assets/img/carousel-15.webp" alt="Suivi des résultats et impact durable" />
             </article>
           </div>
           <p class="method-section__cta">
-            <br><br>
-            <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
+            <a href="#contact" class="btn btn--dark">Prendre rendez vous</a>
           </p>
         </div>
+      </section>
+
+      <section class="quote-focus animate-fade-in" aria-label="Citation inspirante">
+        <blockquote class="quote-focus__card">
+          <p class="quote-focus__text">
+            « Plutôt que d’ouvrir les autres à la raison, il importe de s’ouvrir à la raison des autres, car l’autre a ses raisons que ma raison ignore. »
+          </p>
+          <cite class="quote-focus__author">Claude Lévi-Strauss</cite>
+        </blockquote>
       </section>
 
       <section class="reviews-section animate-fade-in" id="avis" aria-label="Avis clients">
@@ -428,6 +497,30 @@
                   </div>
                 </div>
               </article>
+              <article class="review-card">
+                <p class="review-card__text">“Marie est une professionnelle à l’écoute, réfléchie et attentive. Ses coachings ont été un vrai plus pour mon évolution personnelle et professionnelle. Je la recommande à 100%, merci Marie.”</p>
+                <div class="review-card__footer">
+                  <img class="review-card__avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Portrait de Léa" />
+                  <div class="review-card__author">
+                    <p class="review-card__name">Léa Bayeux</p>
+                    <p class="review-card__role">Cliente accompagnée</p>
+                  </div>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-card__text">
+                  <span class="review-card__excerpt">“J’ai travaillé avec Marie Troccaz et j’ai apprécié son management bienveillant, positif et constructif. Elle a renforcé la cohésion de notre équipe.”</span>
+                  <span class="review-card__full" hidden>“En tant que professionnelle salariée ayant travaillé avec Marie Troccaz, j’ai trouvé son management bienveillant, positif et constructif. Elle a permis une cohésion forte de notre équipe et un travail en commun. Grâce à cette collaboration, j’ai pu m’épanouir au travail car j’ai pu faire des propositions, créer de petits projets et exprimer ma personnalité. Je me suis sentie soutenue et portée par notre but commun : être entièrement au service des clients.”</span>
+                </p>
+                <button class="review-card__toggle" type="button" aria-expanded="false">Voir plus</button>
+                <div class="review-card__footer">
+                  <img class="review-card__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Portrait de Fanny" />
+                  <div class="review-card__author">
+                    <p class="review-card__name">Fanny Rodet</p>
+                    <p class="review-card__role">Professionnelle accompagnée</p>
+                  </div>
+                </div>
+              </article>
 
               <article class="review-card" aria-hidden="true">
                 <p class="review-card__text">“Marie nous a aidés à clarifier notre vision et à remettre du sens dans nos décisions. L’équipe est beaucoup plus alignée.”</p>
@@ -469,13 +562,141 @@
                   </div>
                 </div>
               </article>
+              <article class="review-card" aria-hidden="true">
+                <p class="review-card__text">“Marie est une professionnelle à l’écoute, réfléchie et attentive. Ses coachings ont été un vrai plus pour mon évolution personnelle et professionnelle. Je la recommande à 100%, merci Marie.”</p>
+                <div class="review-card__footer">
+                  <img class="review-card__avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="" />
+                  <div class="review-card__author">
+                    <p class="review-card__name">Léa Bayeux</p>
+                    <p class="review-card__role">Cliente accompagnée</p>
+                  </div>
+                </div>
+              </article>
+              <article class="review-card" aria-hidden="true">
+                <p class="review-card__text">
+                  <span class="review-card__excerpt">“J’ai travaillé avec Marie Troccaz et j’ai apprécié son management bienveillant, positif et constructif. Elle a renforcé la cohésion de notre équipe.”</span>
+                  <span class="review-card__full" hidden>“En tant que professionnelle salariée ayant travaillé avec Marie Troccaz, j’ai trouvé son management bienveillant, positif et constructif. Elle a permis une cohésion forte de notre équipe et un travail en commun. Grâce à cette collaboration, j’ai pu m’épanouir au travail car j’ai pu faire des propositions, créer de petits projets et exprimer ma personnalité. Je me suis sentie soutenue et portée par notre but commun : être entièrement au service des clients.”</span>
+                </p>
+                <button class="review-card__toggle" type="button" aria-expanded="false">Voir plus</button>
+                <div class="review-card__footer">
+                  <img class="review-card__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="" />
+                  <div class="review-card__author">
+                    <p class="review-card__name">Fanny Rodet</p>
+                    <p class="review-card__role">Professionnelle accompagnée</p>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
+          <section class="trust-logos trust-logos--reviews" aria-label="Ils m'ont fait confiance">
+            <div class="trust-logos__inner">
+              <div class="trust-logos__carousel">
+                <div class="trust-logos__track">
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/onlycamp.png" alt="Logo ONLYCAMP" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">ONLYCAMP</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/msd-media.png" alt="Logo MSD MEDIA" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">MSD MEDIA</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/vanessa-conseil-coaching.png" alt="Logo Vanessa Conseil et Coaching" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">VANESSA CONSEIL ET COACHING</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/fournil-de-sylvain.png" alt="Logo Fournil de Sylvain" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">FOURNIL DE SYLVAIN</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/office-tourisme-die.png" alt="Logo Office du Tourisme Die" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">OFFICE DU TOURISME DIE</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/departement-drome.png" alt="Logo Département Drôme" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">DEPARTEMENT DROME</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/inc3m.png" alt="Logo INC3M" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">INC3M</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/vallee-de-la-drome.png" alt="Logo Vallée de la Drôme" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">VALLEE DE LA DROME</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logos/hotel-le-carnot.png" alt="Logo Hotel Le Carnot" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">HOTEL LE CARNOT</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logo-fournil.png" alt="Logo Fournil" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">FOURNIL</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" src="assets/img/logo-vh.png" alt="Logo VH" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">VH</span>
+                  </div>
+                  <div class="trust-logos__item">
+                    <img class="trust-logos__img" style="width: 120px;" src="assets/img/logo-msd.png" alt="Logo MSD" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">MSD</span>
+                  </div>
+
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logos/onlycamp.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">ONLYCAMP</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" style="width: 120px;" src="assets/img/logo-msd.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logos/vanessa-conseil-coaching.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">VANESSA CONSEIL ET COACHING</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logo-fournil.png" alt="Logo Fournil" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">FOURNIL DE SYLVAIN</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logos/office-tourisme-die.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">OFFICE DU TOURISME DIE</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logos/departement-drome.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">DEPARTEMENT DROME</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logos/inc3m.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">INC3M</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logos/vallee-de-la-drome.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">VALLEE DE LA DROME</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logos/hotel-le-carnot.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">HOTEL LE CARNOT</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logo-fournil.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">FOURNIL</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" src="assets/img/logo-vh.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">VH</span>
+                  </div>
+                  <div class="trust-logos__item" aria-hidden="true">
+                    <img class="trust-logos__img" style="width: 120px;" src="assets/img/logo-msd.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';" />
+                    <span class="trust-logos__fallback">MSD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
         <br><br><br>
         <!-- TrustBox widget - Review Collector -->
 <div class="trustpilot-widget" data-locale="fr-FR" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="682207bf29e62a5ce00eab5b" data-style-height="52px" data-style-width="100%" data-token="84067782-b475-4cdd-9b78-45038781821b">
-  <a href="https://fr.trustpilot.com/review/msd-media.com" target="_blank" rel="noopener">Trustpilot</a>
+  <a href="https://fr.trustpilot.com/review/marietroccaz.com" target="_blank" rel="noopener">Trustpilot</a>
 </div>
 <!-- End TrustBox widget -->
       </section>
@@ -488,25 +709,27 @@
 
           <div class="faq-card is-open">
             <button class="faq-card__q" type="button" aria-expanded="true">
-              <span>Quel est votre processus d’accompagnement ?</span>
+              <span>Quel est mon processus d’accompagnement ?</span>
               <span class="faq-card__icon" aria-hidden="true">−</span>
             </button>
             <div class="faq-card__a" aria-hidden="false">
               <p>
-                J’adopte une approche orientée résultats qui combine clarté stratégique et intelligence
-                relationnelle. Nous commençons par un diagnostic, puis nous construisons des actions
-                concrètes pour renforcer la cohésion, la culture managériale et la performance durable.
+                J’adopte une approche orientée résultats qui combine clarté stratégique et intelligence relationnelle.
+                Nous commençons par évaluer vos besoins, fixons des objectifs SMART puis nous posons des actions concrètes.
               </p>
             </div>
           </div>
 
           <div class="faq-card">
             <button class="faq-card__q" type="button" aria-expanded="false">
-              <span>Combien de temps dure une mission ?</span>
+              <span>Combien de temps dure un accompagnement ?</span>
               <span class="faq-card__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-card__a" aria-hidden="true">
-              <p>Selon vos enjeux : de quelques sessions ciblées à un accompagnement sur plusieurs mois.</p>
+              <p>
+                Selon vos enjeux, l’accompagnement peut varier de sessions ciblées à un programme complet sur plusieurs mois.
+                Je m’adapte pleinement à vos besoins et au rythme de votre établissement, pour que chaque intervention soit impactante, pertinente et en phase avec votre saison touristique.
+              </p>
             </div>
           </div>
 
@@ -516,17 +739,57 @@
               <span class="faq-card__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-card__a" aria-hidden="true">
-              <p>Oui, c’est central : posture managériale, communication d’équipe et rituels de pilotage.</p>
+              <p>
+                Si votre établissement compte des managers, je les accompagne sur leur posture managériale, la communication d’équipe et les rituels de pilotage.
+                Mais avant cela, je m’assure que toute l’équipe adhère à l’approche et respecte les engagements de chacun, pour garantir un accompagnement efficace et durable.
+              </p>
             </div>
           </div>
 
           <div class="faq-card">
             <button class="faq-card__q" type="button" aria-expanded="false">
-              <span>Comment démarrer ?</span>
+              <span>Comment savoir si cet accompagnement est pour moi ?</span>
               <span class="faq-card__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-card__a" aria-hidden="true">
-              <p>On démarre avec un échange de cadrage pour définir vos objectifs et la bonne trajectoire.</p>
+              <p>Elle est faite pour vous si :</p>
+              <ul>
+                <li>Vous savez que la performance passe d’abord par la qualité humaine de vos équipes.</li>
+                <li>Vous souhaitez une organisation stable, exigeante et alignée avec vos valeurs.</li>
+                <li>Vous êtes prêt(e) à vous remettre en question pour élever votre niveau de leadership et votre posture managériale.</li>
+                <li>Vous aspirez à une expérience client plus cohérente et plus haut de gamme.</li>
+                <li>Vous cherchez une performance durable et stable même en pleine saison.</li>
+              </ul>
+              <p>
+                Si ce n’est pas suffisant, sachez que le premier échange de 45 min est offert et que je suis disponible pour répondre à vos questions.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-card__q" type="button" aria-expanded="false">
+              <span>Qu’est-ce qu’un coach ?</span>
+              <span class="faq-card__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-card__a" aria-hidden="true">
+              <p>
+                Le coach est une personne qui vous permet d’adopter un nouveau point de vue et qui a pour rôle d’ouvrir le champ des possibles par son questionnement,
+                et de lever les freins pour permettre une mise en action. Il ne prend pas de position, reste dans l’écoute active et vous recentre sur des faits concrets.
+                Vous avez les pleins pouvoirs sur vos décisions, et c’est cela qui rend l’accompagnement puissant et durable.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-card__q" type="button" aria-expanded="false">
+              <span>De quels diplômes suis-je certifiée ?</span>
+              <span class="faq-card__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-card__a" aria-hidden="true">
+              <p>
+                Je suis diplômée de la formation certifiée de l’école BECOACH par Franck Nicolas depuis 2025
+                et diplômée de la formation certifiée de l’Institut Français Supérieur des Métiers de Sophrologie de Clermont Ferrand depuis 2018.
+              </p>
             </div>
           </div>
         </div>
@@ -539,9 +802,9 @@
           <p>Un premier échange pour clarifier vos enjeux et définir la meilleure trajectoire d’accompagnement.</p><br>
           <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
           <div class="cta-band__photos" aria-hidden="true">
-            <img src="assets/img/carousel-16.jpeg" alt="" />
-            <img src="assets/img/carousel-17.jpeg" alt="" />
-            <img src="assets/img/carousel-15.jpeg" alt="" />
+            <img src="assets/img/carousel-16.webp" alt="" />
+            <img src="assets/img/carousel-17.webp" alt="" />
+            <img src="assets/img/carousel-15.webp" alt="" />
           </div>
         </div>
       </section>

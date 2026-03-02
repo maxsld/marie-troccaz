@@ -1310,17 +1310,6 @@ display: table;
   flex-shrink: 0;
 }
 
-.review-card__avatar--placeholder {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(127, 127, 245, 0.2);
-  color: #3e3570;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
 .review-card__author {
   margin: 0;
 }

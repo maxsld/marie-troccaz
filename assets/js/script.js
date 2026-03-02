@@ -74,136 +74,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Animations d'apparition
 document.addEventListener("DOMContentLoaded", () => {
-  const bindReviewToggleHandlers = (scope = document) => {
-    scope.querySelectorAll(".review-card__toggle").forEach((toggleButton) => {
-      const reviewCard = toggleButton.closest(".review-card");
-      if (!reviewCard) return;
-
-      const excerpt = reviewCard.querySelector(".review-card__excerpt");
-      const fullText = reviewCard.querySelector(".review-card__full");
-      if (!excerpt || !fullText) return;
-
-      toggleButton.addEventListener("click", () => {
-        const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-        const nextExpanded = !isExpanded;
-
-        excerpt.hidden = nextExpanded;
-        fullText.hidden = !nextExpanded;
-        toggleButton.setAttribute("aria-expanded", String(nextExpanded));
-        toggleButton.textContent = nextExpanded ? "Voir moins" : "Voir plus";
-      });
-    });
-  };
-
-  const createAvatarPlaceholder = (authorName = "") => {
-    const initials = authorName
-      .split(/\s+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((part) => part[0].toUpperCase())
-      .join("") || "CL";
-
-    const avatar = document.createElement("div");
-    avatar.className = "review-card__avatar review-card__avatar--placeholder";
-    avatar.setAttribute("aria-hidden", "true");
-    avatar.textContent = initials;
-    return avatar;
-  };
-
-  const formatReviewDate = (input) => {
-    if (!input) return "";
-    const date = new Date(input);
-    if (Number.isNaN(date.getTime())) return "";
-    return date.toLocaleDateString("fr-FR", { day: "2-digit", month: "long", year: "numeric" });
-  };
-
-  const createReviewCard = (review, isClone = false) => {
-    const article = document.createElement("article");
-    article.className = "review-card";
-    if (isClone) article.setAttribute("aria-hidden", "true");
-
-    const rawText = typeof review.text === "string" ? review.text.trim() : "";
-    const text = rawText.length > 0 ? rawText : "Avis client Trustpilot.";
-    const displayText = text.startsWith("“") || text.startsWith("\"") ? text : `“${text}”`;
-    const maxExcerptLength = 230;
-
-    const textParagraph = document.createElement("p");
-    textParagraph.className = "review-card__text";
-
-    if (!isClone && displayText.length > maxExcerptLength) {
-      const excerpt = document.createElement("span");
-      excerpt.className = "review-card__excerpt";
-      excerpt.textContent = `${displayText.slice(0, maxExcerptLength).trim()}…`;
-
-      const full = document.createElement("span");
-      full.className = "review-card__full";
-      full.hidden = true;
-      full.textContent = displayText;
-
-      textParagraph.append(excerpt, full);
-      article.appendChild(textParagraph);
-
-      const toggle = document.createElement("button");
-      toggle.className = "review-card__toggle";
-      toggle.type = "button";
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.textContent = "Voir plus";
-      article.appendChild(toggle);
-    } else {
-      textParagraph.textContent = displayText;
-      article.appendChild(textParagraph);
-    }
-
-    const footer = document.createElement("div");
-    footer.className = "review-card__footer";
-    footer.appendChild(createAvatarPlaceholder(review.author || ""));
-
-    const authorWrap = document.createElement("div");
-    authorWrap.className = "review-card__author";
-
-    const name = document.createElement("p");
-    name.className = "review-card__name";
-    name.textContent = review.author || "Client vérifié";
-
-    const role = document.createElement("p");
-    role.className = "review-card__role";
-    const formattedDate = formatReviewDate(review.publishedAt);
-    role.textContent = formattedDate ? `Avis Trustpilot • ${formattedDate}` : "Avis Trustpilot";
-
-    authorWrap.append(name, role);
-    footer.appendChild(authorWrap);
-    article.appendChild(footer);
-
-    return article;
-  };
-
-  const renderReviewsFromJson = (reviews) => {
-    const track = document.getElementById("reviews-carousel-track");
-    if (!track || !Array.isArray(reviews) || reviews.length === 0) return false;
-
-    const normalized = reviews
-      .map((review) => ({
-        author: typeof review.author === "string" ? review.author.trim() : "",
-        text: typeof review.text === "string" ? review.text.trim() : "",
-        publishedAt: typeof review.publishedAt === "string" ? review.publishedAt : ""
-      }))
-      .filter((review) => review.text.length > 0)
-      .slice(0, 8);
-
-    if (normalized.length === 0) return false;
-
-    track.innerHTML = "";
-    normalized.forEach((review) => {
-      track.appendChild(createReviewCard(review, false));
-    });
-    normalized.forEach((review) => {
-      track.appendChild(createReviewCard(review, true));
-    });
-
-    bindReviewToggleHandlers(track);
-    return true;
-  };
-
   document.querySelectorAll("img").forEach((img) => {
     if (img.classList.contains("brand__logo") || img.closest(".hero")) {
       if (!img.hasAttribute("decoding")) img.decoding = "async";
@@ -306,21 +176,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  bindReviewToggleHandlers();
+  document.querySelectorAll(".review-card__toggle").forEach((toggleButton) => {
+    const reviewCard = toggleButton.closest(".review-card");
+    if (!reviewCard) return;
 
-  const reviewsTrack = document.getElementById("reviews-carousel-track");
-  if (reviewsTrack) {
-    const source = reviewsTrack.dataset.source || "assets/data/trustpilot-reviews.json";
-    fetch(source, { cache: "no-store" })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((payload) => {
-        if (!payload || !Array.isArray(payload.reviews)) return;
-        renderReviewsFromJson(payload.reviews);
-      })
-      .catch(() => {
-        // Fallback: keep static reviews from HTML when feed is unavailable.
-      });
-  }
+    const excerpt = reviewCard.querySelector(".review-card__excerpt");
+    const fullText = reviewCard.querySelector(".review-card__full");
+    if (!excerpt || !fullText) return;
+
+    toggleButton.addEventListener("click", () => {
+      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+      const nextExpanded = !isExpanded;
+
+      excerpt.hidden = nextExpanded;
+      fullText.hidden = !nextExpanded;
+      toggleButton.setAttribute("aria-expanded", String(nextExpanded));
+      toggleButton.textContent = nextExpanded ? "Voir moins" : "Voir plus";
+    });
+  });
 
   const fadeInRightElements = document.querySelectorAll(".animate-fade-in");
   const fadeInOpacityElements = document.querySelectorAll(".animate-fade-opacity");

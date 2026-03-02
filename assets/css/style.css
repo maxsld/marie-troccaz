@@ -18,6 +18,8 @@
   --camel: #a8825d;
   --cacao: #5a2d1b;
   --paper: #fffdf2;
+  --section-space: 6rem;
+  --section-space-mobile: 4.5rem;
 }
 
 * {
@@ -128,18 +130,18 @@ body {
 
 .burger span {
   display: block;
-  width: 22px;
-  height: 1px;
+  width: 24px;
+  height: 2px;
   background: var(--ink);
   transition: transform 0.26s ease, opacity 0.2s ease;
 }
 
 .burger.is-open span:first-child {
-  transform: translateY(4.5px) rotate(20deg);
+  transform: translateY(5px) rotate(45deg);
 }
 
 .burger.is-open span:last-child {
-  transform: translateY(-4.5px) rotate(-20deg);
+  transform: translateY(-5px) rotate(-45deg);
 }
 
 .mobile-menu {
@@ -460,9 +462,11 @@ body {
 .marquee__track img {
   width: 320px;
   height: 280px;
+  aspect-ratio: 8 / 7;
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 10px;
+  display: block;
 }
 
 @keyframes slide {
@@ -529,6 +533,7 @@ body {
   .marquee__track img {
     width: 240px;
     height: 170px;
+    aspect-ratio: 24 / 17;
   }
 
   .trust-logos__inner {
@@ -561,12 +566,13 @@ body {
 .about-story__content {
   max-width: 1300px;
   margin: 0 auto;
-  padding: clamp(28px, 4vw, 60px) 24px 46px;
+  padding: 24px 46px;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(20px, 4vw, 56px);
   align-items: center;
 }
+
 
 .about-story__text h2 {
   font-family: "Instrument Serif", serif;
@@ -904,7 +910,7 @@ body {
 
 .services__stack {
   display: grid;
-  gap: 100px;
+  gap: 64px;
 }
 
 .service-panel {
@@ -922,22 +928,23 @@ body {
   flex: 0 0 43%;
   display: flex;
   align-items: center;
+  height: 360px;
+  min-height: 360px;
+  max-height: 360px;
 }
 
 .service-panel__media img {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   display: block;
   object-fit: cover;
   border-radius: 14px;
-  max-height: 420px;
   transform: rotate(-1.5deg);
   transform-origin: center;
 }
 
 .service-panel--reverse .service-panel__media img {
   transform: rotate(1.5deg);
-  max-height: 420px;
   margin: auto 0;
 }
 
@@ -987,19 +994,30 @@ body {
     flex-direction: column;
   }
 
+  .services__stack {
+    gap: 28px;
+  }
+
   .service-panel__media {
+    width: 100%;
+    height: 280px;
     min-height: 280px;
+    max-height: 280px;
   }
 
   .service-panel__media img {
-    height: 280px;
+    height: 100% !important;
     transform: none;
   }
 
   .service-panel--reverse .service-panel__media img {
     transform: none;
-    height: 420px;
-    margin-bottom: 2rem;
+    height: 100% !important;
+    margin-bottom: 0;
+  }
+
+  .service-panel {
+    padding-bottom: 0;
   }
 }
 
@@ -1180,7 +1198,7 @@ display: table;
   .method-step:nth-of-type(even) {
     width: 100%;
     margin: 0 0 12px;
-    transform: none;
+    transform: none !important;
   }
 
 }
@@ -1290,6 +1308,17 @@ display: table;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+.review-card__avatar--placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(127, 127, 245, 0.2);
+  color: #3e3570;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .review-card__author {
@@ -1824,9 +1853,61 @@ display: table;
   border-color: rgba(122, 47, 242, 0.55);
 }
 
+.about-story,
+.parcours-band,
+.services,
+.method-section,
+.quote-focus,
+.reviews-section,
+.faq-section,
+.cta-band {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+.about-story,
+.parcours-band {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.about-story {
+  padding-bottom: 0;
+}
+
+.about-story + .parcours-band {
+  padding-top: 0;
+  padding-bottom: 6rem;
+}
+
+.quote-focus {
+  padding-top: calc(var(--section-space) + 2rem);
+}
+
 @media (max-width: 640px) {
+  .about-story,
+  .parcours-band,
+  .services,
+  .method-section,
+  .quote-focus,
+  .reviews-section,
+  .faq-section,
   .cta-band {
-    padding: 24px 16px 56px;
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
+
+  .about-story {
+    padding-bottom: 0;
+  }
+
+  .about-story + .parcours-band {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .quote-focus {
+    padding-top: calc(var(--section-space-mobile) + 1rem);
   }
 
   .cta-band__photos img:nth-child(1) {

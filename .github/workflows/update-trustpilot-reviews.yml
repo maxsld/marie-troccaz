@@ -1,0 +1,36 @@
+name: Update Trustpilot Reviews
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch latest Trustpilot reviews
+        run: node scripts/update-trustpilot-reviews.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/data/trustpilot-reviews.json
+          if git diff --cached --quiet; then
+            echo "No review update to commit."
+            exit 0
+          fi
+          git commit -m "chore: update Trustpilot reviews"
+          git push

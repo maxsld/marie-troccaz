@@ -155,7 +155,8 @@ body {
 }
 
 .mobile-menu.is-open {
-  max-height: 360px;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
   opacity: 1;
   transform: translateY(0);
 }
@@ -1105,6 +1106,7 @@ display: table;
   margin: 26px 0 0;
   text-align: center;
 }
+
 
 .method-timeline__line {
   position: absolute;
